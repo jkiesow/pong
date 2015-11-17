@@ -6,13 +6,12 @@ if (window.XMLHttpRequest) {
 } else if(window.ActiveXObject){
     XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
 }
-document.getElementById('testbereich').addEventListener(onload, getData('test.php', 'testbereich'));
+document.getElementById('testbereich').addEventListener(onload, getData('test.txt', 'testbereich'));
 
 function getData(src, divID){
     setInterval(function(){
         if(XMLHttpRequestObject){
-        console.log(XMLHttpRequestObject.readyState);
-        var obj = document.getElementById(divID).;
+        var obj = document.getElementById(divID);
         XMLHttpRequestObject.open("GET", src);
         console.log(XMLHttpRequestObject.readyState);
 
@@ -26,9 +25,8 @@ function getData(src, divID){
         }
         console.log(XMLHttpRequestObject.readyState);
         XMLHttpRequestObject.send(null);
-        console.log(XMLHttpRequestObject.readyState);
     }
-    },5000);
+    },3500);
 }
   
     
