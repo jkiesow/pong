@@ -1,13 +1,12 @@
  <?php
     $pong = simplexml_load_file ( 'bla.xml' );
     $real = 0;
-    foreach($pong->children() as $child){
+    foreach($pong->game as $child){
     if($child->running == "true" && $child->namep1 == $_GET['namep1'] && $child->namep2 == $_GET['namep2']){
         echo "Game is already running!";
         $real = $real + 0;
         $child->scorep1 = $_GET['scorep1'];
         $child->scorep2 = $_GET['scorep2'];
-        $child->running = $_GET['running'];
     }else{
             $real = $real + 1;
         }
