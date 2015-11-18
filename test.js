@@ -7,16 +7,25 @@ if (window.XMLHttpRequest) {
     XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
 }
 
-function writeData(input){
+function writeData(){
     if(XMLHttpRequestObject){
-        var kaka = XMLHttpRequestObject.open("GET", "test.php?text="+input);
-        
+        var namep1 = document.getElementById('namep1').value;
+        var namep2 = document.getElementById('namep2').value;
+        var running = document.getElementById('running').value;
+        var scorep1 = document.getElementById('scorep1').value;
+        var scorep2 = document.getElementById('scorep2').value;
+        console.log(XMLHttpRequestObject.readyState);
+        var dataString = "namep1="+namep1+"&namep2="+namep2+"&running="+running+"&scorep1="+scorep1+"&scorep2="+scorep2;
+        XMLHttpRequestObject.open("GET", "testxml.php?"+dataString);
+        console.log(XMLHttpRequestObject.readyState);
         XMLHttpRequestObject.onreadystatechange = function(){
+            console.log(XMLHttpRequestObject.readyState);
             if(XMLHttpRequestObject.readyState==4 && XMLHttpRequestObject.status == 200){
-                //obj.innerHTML = XMLHttpRequestObject.responseText;
+               XMLHttpRequestObject.send();
+                console.log(XMLHttpRequestObject.readyState);
                 
             }
         }
-        XMLHttpRequestObject.send(null);
+        XMLHttpRequestObject.send();
     }
 }

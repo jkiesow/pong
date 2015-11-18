@@ -26,25 +26,25 @@
                 
                 <div style="width:600px" class="wmfg_layout_0">
 
-                    <form method="post" action="writeData()">
+                    <form method="get">
 
                     <ul class="wmfg_questions">
 
                         <li class="wmfg_q">
                             <label class="wmfg_label" for="text_id">Name Player 1</label>
-                            <input type="text" class="wmfg_text" name="text_name" id="text_id" value="" />
+                            <input type="text" class="wmfg_text" name="text_name" id="namep1" value="" />
                         </li>
 
                         <li class="wmfg_q">
                             <label class="wmfg_label" for="text_id">Name Player 2</label>
-                            <input type="text" class="wmfg_text" name="text_name" id="text_id" value="" />
+                            <input type="text" class="wmfg_text" name="text_name" id="namep2" value="" />
                         </li>
 
                         <li class="wmfg_q">
                             <label class="wmfg_label">Game running?</label>
                             <table class="wmfg_answers">
                                 <tr class="wmfg_a">
-                                    <td class="wmfg_a_td"><input type="checkbox" class="wmfg_checkbox" name="checkbox_1" id="checkbox_1" value="value 1" /></td>
+                                    <td class="wmfg_a_td"><input type="checkbox" class="wmfg_checkbox" name="checkbox_1" id="running" checked /></td>
                                     <td><label class="wmfg_label_a" for="checkbox_1">Yes</label></td>
                                 </tr>
                             </table>
@@ -52,16 +52,16 @@
 
                         <li class="wmfg_q">
                             <label class="wmfg_label" for="text_id">Score p1</label>
-                            <input type="text" class="wmfg_text" name="text_name" id="text_id" value="" />
+                            <input type="text" class="wmfg_text" name="text_name" id="scorep1" value="" />
                         </li>
 
                         <li class="wmfg_q">
                             <label class="wmfg_label" for="text_id">Score p2</label>
-                            <input type="text" class="wmfg_text" name="text_name" id="text_id" value="" />
+                            <input type="text" class="wmfg_text" name="text_name" id="scorep2" value="" />
                         </li>
 
                         <li class="wmfg_q">
-                            <input type="submit" class="wmfg_btn" name="submit_name" id="submit_id" value="Senden" />
+                            <input type="submit" class="wmfg_btn" name="submit_name" id="submit_id" value="Senden" onclick = "writeData()"/>
                         </li>
 
                     </ul>
