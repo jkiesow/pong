@@ -4,17 +4,12 @@
 <!ELEMENT player (name , wins)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT wins (#PCDATA)>
-<!ELEMENT game (scorep1 , scorep2 , namep1 , namep2)>
+<!ELEMENT game (scorep1 , scorep2 , namep1 , namep2 , running)>
 <!ELEMENT scorep1 (#PCDATA)>
 <!ELEMENT scorep2 (#PCDATA)>
 <!ELEMENT namep1 (#PCDATA)>
 <!ELEMENT namep2 (#PCDATA)>
+<!ELEMENT running (#PCDATA)>
 ]>
 <pong>
-    <game running="true">
-        <scorep1>2</scorep1>
-        <scorep2>1</scorep2>
-        <namep1>Flo</namep1>
-        <namep2>Jannis</namep2>
-    </game>
-<game running="true"><namep1>Alex</namep1><namep2>Jannis</namep2><scorep1>2</scorep1><scorep2>1</scorep2></game></pong>
+</pong>
