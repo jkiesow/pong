@@ -81,6 +81,7 @@ Pong = {
     if (!this.playing) {
       this.scores = [0, 0];
       this.playing = true;
+        // HIER KOMMT RUNNING HIN
       this.leftPaddle.setAuto(numPlayers < 1, this.level(0));
       this.rightPaddle.setAuto(numPlayers < 2, this.level(1));
       this.ball.reset();
@@ -106,9 +107,11 @@ Pong = {
   goal: function(playerNo) {
     this.sounds.goal();
     this.scores[playerNo] += 1;
+      // Player No
     if (this.scores[playerNo] == 9) {
       this.menu.declareWinner(playerNo);
       this.stop();
+        // RUNNING 
     }
     else {
       this.ball.reset(playerNo);
