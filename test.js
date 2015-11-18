@@ -16,16 +16,16 @@ function writeData(){
         var scorep2 = document.getElementById('scorep2').value;
         console.log(XMLHttpRequestObject.readyState);
         var dataString = "namep1="+namep1+"&namep2="+namep2+"&running="+running+"&scorep1="+scorep1+"&scorep2="+scorep2;
-        XMLHttpRequestObject.open("GET", "testxml.php?"+dataString);
+        XMLHttpRequestObject.open("GET", "testxml.php?"+dataString, true);
         console.log(XMLHttpRequestObject.readyState);
         XMLHttpRequestObject.onreadystatechange = function(){
             console.log(XMLHttpRequestObject.readyState);
             if(XMLHttpRequestObject.readyState==4 && XMLHttpRequestObject.status == 200){
-               XMLHttpRequestObject.send();
                 console.log(XMLHttpRequestObject.readyState);
+                var xmlDoc = XMLHttpRequestObject.responseXML;
                 
             }
-        }
+        };
         XMLHttpRequestObject.send();
     }
 }

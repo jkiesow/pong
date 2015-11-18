@@ -1,13 +1,13 @@
  <?php
      $xml = simplexml_load_file ( 'bla.xml' );
 
-     $pong = $xml->xpath('pong');
+     $pong = $xml->xpath("pong");
 
      $player = $pong->addchild("player");
 
      $game = $pong->addchild("game");
      
-     $pong->addAttribute('',''); 
+   //  $pong->addAttribute('',''); 
 
      $player->addChild("name","test");
 
