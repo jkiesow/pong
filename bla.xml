@@ -12,4 +12,4 @@
 <!ELEMENT running (#PCDATA)>
 ]>
 <pong>
-</pong>
+<game><namep1>kati</namep1><namep2>max</namep2><scorep1>9</scorep1><scorep2>5</scorep2><running>false</running></game><game><namep1>kati</namep1><namep2>max</namep2><scorep1>4</scorep1><scorep2>5</scorep2><running>false</running></game><game><namep1>kati</namep1><namep2>max</namep2><scorep1>45</scorep1><scorep2>5</scorep2><running>true</running></game><game><namep1>Jannis</namep1><namep2>Flo</namep2><scorep1>4</scorep1><scorep2>5</scorep2><running>false</running></game><game><namep1>Jannis</namep1><namep2>Flo</namep2><scorep1>5</scorep1><scorep2>4</scorep2><running>true</running></game></pong>
