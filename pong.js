@@ -97,7 +97,9 @@ Pong = {
       document.getElementById("1").value = "0"; //
       document.getElementById("running").checked = true;
       this.playing = true;
+
         writeData();
+
       this.leftPaddle.setAuto(numPlayers < 1, this.level(0));
       this.rightPaddle.setAuto(numPlayers < 2, this.level(1));
       this.ball.reset();
@@ -130,13 +132,17 @@ Pong = {
   goal: function(playerNo) {
     this.sounds.goal();
     this.scores[playerNo] += 1;
+
     var write_score = document.getElementById(playerNo);//
     write_score.value = this.scores[playerNo];//
     writeData();//
+
+
     if (this.scores[playerNo] == 9) {
       this.menu.declareWinner(playerNo);
       writeWinner(playerNo);
       this.stop();
+
     }
     else {
       this.ball.reset(playerNo);
