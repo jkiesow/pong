@@ -13,7 +13,7 @@
 
      $player->addChild("win","1");
 
-     $game->addChild("namep1","1");
+     $game->addChild("namep1",$_GET['text']);
 
      $game->addChild("namep2","2");
     
@@ -21,5 +21,5 @@
 
      $game->addChild("namep2","2");
 
-     echo $xml->saveXML( 'log.xml' );
+     echo $xml->saveXML( 'bla.xml' );
  ?>

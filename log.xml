@@ -21,4 +21,4 @@
         <namep1/>
         <namep2/>
     </game>
-<pong><player><name>test</name><win>1</win></player><game><namep1>Janni</namep1><namep2>2</namep2><scorep1>1</scorep1><namep2>2</namep2></game></pong><pong><player><name>test</name><win>1</win></player><game><namep1>Jannis</namep1><namep2>2</namep2><scorep1>1</scorep1><namep2>2</namep2></game></pong></pong>
+<pong><player><name>test</name><win>1</win></player><game><namep1>Jannis</namep1><namep2>2</namep2><scorep1>1</scorep1><namep2>2</namep2></game></pong></pong>

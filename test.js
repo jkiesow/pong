@@ -9,7 +9,7 @@ if (window.XMLHttpRequest) {
 
 function writeData(input){
     if(XMLHttpRequestObject){
-        var kaka = XMLHttpRequestObject.open("GET", "test.php?text="+input);
+        var kaka = XMLHttpRequestObject.open("GET", "testxml.php?text="+input);
         
         XMLHttpRequestObject.onreadystatechange = function(){
             if(XMLHttpRequestObject.readyState==4 && XMLHttpRequestObject.status == 200){
