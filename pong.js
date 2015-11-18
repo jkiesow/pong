@@ -73,14 +73,31 @@ Pong = {
     }.bind(this));
   },
 
-  startDemo:         function() { this.start(0); },
-  startSinglePlayer: function() { this.start(1); },
-  startDoublePlayer: function() { this.start(2); },
+  startDemo:         function() {
+      document.getElementById("namep1").value = "Computer 1";
+      document.getElementById("namep2").value = "Computer 2";
+      this.start(0);
+                                    },
+  startSinglePlayer: function() {
+      var namep1_input = prompt("Please enter your name!");
+      document.getElementById("namep1").value = namep1_input;
+      document.getElementById("namep2").value = "Computer";
+      this.start(1); },
+  startDoublePlayer: function() { 
+      var namep1_input = prompt("Please enter Player 1 name!");
+      var namep2_input = prompt("Please enter Player 2 name!");
+      document.getElementById("namep1").value = namep1_input;
+      document.getElementById("namep2").value = namep2_input;
+      this.start(2); },
 
   start: function(numPlayers) {
     if (!this.playing) {
       this.scores = [0, 0];
+      document.getElementById("0").value = "0"; //
+      document.getElementById("1").value = "0"; //
+      document.getElementById("running").checked = true;
       this.playing = true;
+        writeData();
       this.leftPaddle.setAuto(numPlayers < 1, this.level(0));
       this.rightPaddle.setAuto(numPlayers < 2, this.level(1));
       this.ball.reset();
@@ -91,10 +108,17 @@ Pong = {
   stop: function(ask) {
     if (this.playing) {
       if (!ask || this.runner.confirm('Abandon game in progress ?')) {
+        document.getElementById("running").checked = false;
+        writeData();
+        document.getElementById("0").value = "0";
+        document.getElementById("1").value = "0";
+        document.getElementById("namep1").value = "";
+        document.getElementById("namep2").value = "";
         this.playing = false;
         this.leftPaddle.setAuto(false);
         this.rightPaddle.setAuto(false);
         this.runner.showCursor();
+        
       }
     }
   },
@@ -106,8 +130,12 @@ Pong = {
   goal: function(playerNo) {
     this.sounds.goal();
     this.scores[playerNo] += 1;
+    var write_score = document.getElementById(playerNo);//
+    write_score.value = this.scores[playerNo];//
+    writeData();//
     if (this.scores[playerNo] == 9) {
       this.menu.declareWinner(playerNo);
+      writeWinner(playerNo);
       this.stop();
     }
     else {

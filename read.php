@@ -1,11 +1,10 @@
 <?php
     $xml = simplexml_load_file ( 'bla.xml' );
     
-    foreach($xml->game as $child){
+    foreach($xml->games->game as $child){
         if($child->scorep1 >= 9 || $child->scorep2 >= 9){
             $child->running="false";
-            $dom=dom_import_simplexml($child);
-            $dom->parentNode->removeChild($dom);
+
         }
         if($child->running=="true"){
             echo "<table>";

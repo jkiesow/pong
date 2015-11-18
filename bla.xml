@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE pong [
-<!ELEMENT pong (player , game)>
+<!ELEMENT pong (players , games)>
+<!ELEMENT players (player)>
+<!ELEMENT games (game)>
 <!ELEMENT player (name , wins)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT wins (#PCDATA)>
@@ -12,5 +14,6 @@
 <!ELEMENT running (#PCDATA)>
 ]>
 <pong>
-
-<game><namep1>Kai</namep1><namep2>Max</namep2><scorep1>9</scorep1><scorep2>5</scorep2><running>true</running></game></pong>
+    <games><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Jannis</namep1><namep2>Computer</namep2><scorep1>0</scorep1><scorep2>3</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>true</running></game><game><namep1>Computer 1</namep1><namep2>Computer 2</namep2><scorep1>2</scorep1><scorep2>6</scorep2><running>false</running></game></games>
+    <players/>
+</pong>

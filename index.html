@@ -22,7 +22,7 @@
             <main>
                 
                 
-                <div style="width:600px" class="wmfg_layout_0">
+               <!--<div style="width:600px" class="wmfg_layout_0">
 
                     <form>
 
@@ -66,10 +66,10 @@
 
                     </form>
 
-                </div>
+                </div>-->
                 
                 <!-- START Code von https://github.com/jakesgordon/javascript-pong/-->
-                <!--<div class='description'>
+                <div class='description'>
                     <p>
                         This is a javascript version of Pong.
                     </p>
@@ -114,9 +114,16 @@
                       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
                     </div>
                   </canvas>
--->
+                <div>    
+                    <input type="number" id="1" oninput="writeData()" value="0" disabled/>
+                    <input type="number" id="0" oninput="writeData()" value="0" disabled/>
+                    <input type="checkbox" id="running" disabled/>
+                    <input type="text" id="namep1" value="" disabled/>
+                    <input type="text" id="namep2" value="" disabled/>
+                </div>
                 <script src="test.js" type="text/javascript"></script>
-<!--
+                <script src="winner.js" type="text/javascript"></script>
+
                   <script src="game.js" type="text/javascript"></script> 
                   <script src="pong.js" type="text/javascript"></script>
                   <script type="text/javascript">
@@ -143,7 +150,7 @@
                   });
                   </script>
                 <!-- STOP Code von https://github.com/jakesgordon/javascript-pong/-->
-                -->
+
             </main>
         </div>
     </body>
