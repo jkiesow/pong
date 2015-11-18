@@ -11,5 +11,10 @@
 <!ELEMENT namep2 (#PCDATA)>
 ]>
 <pong>
-    
-</pong>
+    <game running="true">
+        <scorep1>2</scorep1>
+        <scorep2>1</scorep2>
+        <namep1>Flo</namep1>
+        <namep2>Jannis</namep2>
+    </game>
+<game running="true"><namep1>Alex</namep1><namep2>Jannis</namep2><scorep1>2</scorep1><scorep2>1</scorep2></game></pong>

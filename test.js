@@ -11,7 +11,12 @@ function writeData(){
     if(XMLHttpRequestObject){
         var namep1 = document.getElementById('namep1').value;
         var namep2 = document.getElementById('namep2').value;
-        var running = document.getElementById('running').value;
+        var running = document.getElementById('running');
+        if(running.checked){
+            running="true";
+        }else{
+            running="false";
+        }
         var scorep1 = document.getElementById('scorep1').value;
         var scorep2 = document.getElementById('scorep2').value;
         console.log(XMLHttpRequestObject.readyState);
