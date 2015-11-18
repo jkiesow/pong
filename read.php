@@ -18,6 +18,8 @@
             echo "<td>", $child->scorep1, " : ", $child->scorep2, "</td>";
             echo "</tr>";
             echo "</table>";
+        }else{
+            unset($child);
         }
         
     
