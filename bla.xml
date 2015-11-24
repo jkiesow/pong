@@ -12,5 +12,11 @@
 <!ELEMENT running (#PCDATA)>
 ]>
 <pong>
-
-<game><namep1>Kai</namep1><namep2>Max</namep2><scorep1>9</scorep1><scorep2>5</scorep2><running>true</running></game></pong>
+    <game>
+        <namep1>hi</namep1>
+        <namep2>ho</namep2>
+        <scorep1>9</scorep1>
+        <scorep2>9</scorep2>
+        <running>true</running>
+    </game>
+</pong>

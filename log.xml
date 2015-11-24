@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE pong [
+<!ELEMENT pong (player , game)>
+<!ELEMENT player (name , wins)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT wins (#PCDATA)>
+<!ELEMENT game (scorep1 , scorep2 , namep1 , namep2)>
+<!ELEMENT scorep1 (#PCDATA)>
+<!ELEMENT scorep2 (#PCDATA)>
+<!ELEMENT namep1 (#PCDATA)>
+<!ELEMENT namep2 (#PCDATA)>
+]>
+<pong>
+    <player>
+        <name/>
+        <wins/>
+    </player>
+    <game>
+        <scorep1/>
+        <scorep2/>
+        <namep1/>
+        <namep2/>
+    </game>
+<pong><player><name>test</name><win>1</win></player><game><namep1>Jannis</namep1><namep2>2</namep2><scorep1>1</scorep1><namep2>2</namep2></game></pong></pong>
